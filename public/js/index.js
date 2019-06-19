@@ -15,7 +15,7 @@ document.getElementById('find-photo').addEventListener('click', function() {
     const listOptions = {
         method:'GET',
     };
-    fetch(`http://localhost:5255/api/v1/get-mars?cam=${selectedCam}&sol=${sol}`, listOptions)
+    fetch(`https://marsphoto.herokuapp.com/api/v1/get-mars?cam=${selectedCam}&sol=${sol}`, listOptions)
     .then((res) => res.json())
     .then((datas) => {
         if (datas.datas.length === 0){alert('No Image Available')};
