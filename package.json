@@ -1,0 +1,19 @@
+{
+  "name": "marsphoto-getter",
+  "version": "1.0.0",
+  "description": "An app that gets images gotten on mars out of curriosity",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayooluwa Olosunde",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
