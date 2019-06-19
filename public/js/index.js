@@ -12,8 +12,6 @@ document.getElementById('find-photo').addEventListener('click', function() {
         alert(`CAM field can't be empty`)
         return;
     };
-    console.log(sol)
-    console.log(sol + " "  + selectedCam); 
     const listOptions = {
         method:'GET',
     };
@@ -21,7 +19,6 @@ document.getElementById('find-photo').addEventListener('click', function() {
     .then((res) => res.json())
     .then((datas) => {
         if (datas.datas.length === 0){alert('No Image Available')};
-        console.log(datas.datas);
         let layout = '';
         datas.datas.forEach(data => {
             console.table(data);
