@@ -4,6 +4,14 @@ document.getElementById('find-photo').addEventListener('click', function() {
     // let strUser = cam.options[e.selectedIndex].value;
     // let selectedCam = cam.options[cam.selectedIndex].value;
     let selectedCam = cam.value;
+    if(sol ===''){
+        alert(`SOL can't be empty`)
+        return;
+    };
+    if (selectedCam === ''){
+        alert(`CAM field can't be empty`)
+        return;
+    };
     console.log(sol)
     console.log(sol + " "  + selectedCam); 
     const listOptions = {
@@ -14,6 +22,7 @@ document.getElementById('find-photo').addEventListener('click', function() {
     .then((datas) => {
         if (datas.datas.length === 0){alert('No Image Available')};
         console.log(datas.datas);
+        let layout = '';
         datas.datas.forEach(data => {
             console.table(data);
             const row = `<div class="col-md-3">
@@ -24,28 +33,13 @@ document.getElementById('find-photo').addEventListener('click', function() {
                          <i class="fa fa-star"></i>
                          <i class="fa fa-star"></i>
                          <i class="fa fa-star-half-o"></i>
-                         <h3>${data.name}</h3>
+                         <h3>${data.camera.full_name}</h3>
                      </div>
                   </div>`;
                   layout += row;
             
         });
         document.getElementById('photos').innerHTML = layout;
-        // let layout = '';
-        //     datas.datas.forEach(data => {
-        //         const row = `<div class="col-md-3">
-        //         <a id="${data.id}" class="photo-img" ><img src="${data.logo}"></a>
-        //         <div class="product-bottom text-center">
-        //             <i class="fa fa-star"></i>
-        //             <i class="fa fa-star"></i>
-        //             <i class="fa fa-star"></i>
-        //             <i class="fa fa-star"></i>
-        //             <i class="fa fa-star-half-o"></i>
-        //             <h3>${data.name}</h3>
-        //         </div>
-        //      </div>`;
-        //      layout += row;
-        //     });
-        //     document.getElementById('photos').innerHTML = layout;
+       
     });
 });
