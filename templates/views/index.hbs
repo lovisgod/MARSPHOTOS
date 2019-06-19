@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icons8-sun-48.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <section class="left-side">
+        <div class="main-content">
+            {{>header}}
+            <input placeholder="SOL" class="input-container" id="sol">
+            <br>
+            <select class="input-container" id="cam">
+                <option value="FHAZ">FHAZ</option>
+                <option value="RHAZ">RHAZ</option>
+                <option value="MAST">MAST</option>
+                <option value="MAHLI">MAHLI</option>
+                <option value="CHEMCAM">CHEMCAM</option>
+                <option value="MARDI">MARDI</option>
+                <option value="NAVCAM">NAVCAM</option>
+                <option value="PANCAM">PANCAM</option>
+                <option value="MINITES">MINITES</option>
+            </select>
+            <br>
+            <button class="input-button" id="find-photo">SEARCH</button>
+        </div>
+
+        {{>footer}}
+    </section>
+
+    <section class="right-side">
+        <div class="container">
+            <div class="row" id="photos">
+                <div class="col-md-3">
+                    <a id="3d04af3f-3a1a-4350-be9c-e2d5825b9947" class="photo-img"><img
+                            src="https://res.cloudinary.com/thefoth/image/upload/v1560872595/luzjieefbn8ecoxlrapi.jpg"></a>
+                    <div class="product-bottom text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <h3>Moving Van</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a id="657a2ecc-6858-448f-ad81-ff9a4f496ad3" class="photo-img"><img
+                            src="https://res.cloudinary.com/thefoth/image/upload/v1560872908/ijnabgof5neurpxrrtxd.jpg"></a>
+                    <div class="product-bottom text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <h3>Medium Truck</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a id="2c8d018b-cde1-4a7a-a1ad-cf1e5e7eb02e " class="photo-img"><img
+                            src="https://res.cloudinary.com/thefoth/image/upload/v1560872729/ar6gqty3hvogrnhqakui.jpg"></a>
+                    <div class="product-bottom text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <h3>A Tautilner semi truck</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
